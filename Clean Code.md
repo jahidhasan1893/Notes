@@ -15,7 +15,7 @@ There was a killer app in 1980's, which was highly popular. but as the company a
 
 **The Total Cost of Owning a Mess**
 
-![[Pasted image 20250710151508.png]]
+![[/images/productivity_vs_time.png]]
 
 Messy code slows down software development over time. At first, things move fast, but as the mess grows, even small changes break other parts of the code. This makes progress very slow (Tends to zero). To fix it, managers often hire more people, but new team members don’t understand the system well and accidentally make things worse. As a result, the mess keeps growing, and the team gets less and less done.
 
