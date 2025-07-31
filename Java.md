@@ -18,3 +18,54 @@
 
 	 [Java: Parallelism and concurrency a complete guide](https://pedrosilvatech.medium.com/java-parallelism-and-concurrency-a-complete-guide-d426957538aa)
 
+4. **What's the difference between synchronized and lock in java?**
+
+	 **solution:**
+
+	 In Java, `synchronized` and explicit `Lock` implementations (like `ReentrantLock` from `java.util.concurrent.locks`) are both mechanisms for achieving thread synchronization and ensuring mutual exclusion for shared resources.
+	 
+	 **Synchronized:**
+	 - **Purpose**: Provides mutual exclusion — ensures only one thread can access the synchronized code at a time.
+	 - **Usage**: Can be applied to methods or code blocks 
+	 - **Behavior**: 
+		 - Automatically acquires and releases locks 
+		 - Implicit Locking
+		 - JVM handles the locking mechanism 
+		 - Blocking — threads wait until lock is available 
+		 - Cannot be interrupted while waiting 
+		 - Always releases locks even if exceptions occur
+
+	``` java
+	synchronized void method() { /* thread-safe code */ }  
+	synchronized(object) { /* thread-safe code */ }
+	```
+
+
+	**Lock (java.util.concurrent.locks):**
+	
+	- **Purpose**: Explicit, more flexible locking mechanism
+	- **Implementation**: Interface with various implementations (`ReentrantLock`, `ReadWriteLock`, etc.)
+	- **Advantages over synchronized**:
+		-  **Interruptible lock attempts** via `lockInterruptibly()`
+		- Ability to try acquiring lock without blocking `tryLock()`
+		- Non-block-structured locking (can acquire in one method, release in another)
+		- Read/write locks for better concurrency
+		- Fair/unfair lock ordering policies
+		- Performance monitoring via lock condition stats
+
+
+	``` java
+	Lock lock = new ReentrantLock(); 
+	try {     
+	lock.lock(); // or lock.tryLock() or lock.lockInterruptibly()     
+	// thread-safe code 
+	} finally {     
+	lock.unlock(); // must explicitly release! 
+	}
+	```
+
+	When to use each:
+	- **Synchronized**: Simple use cases, when automatic lock release is preferred.
+	- **Lock**: Complex scenarios requiring timed waits, interruptibility, or fairness control.
+
+	`Lock` provides more fine-grained control and flexibility at the cost of increased complexity, while `synchronized` is simpler but less flexible.
