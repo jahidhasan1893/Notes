@@ -88,3 +88,11 @@ lock.unlock(); // must explicitly release!
 `Lock` provides more fine-grained control and flexibility at the cost of increased complexity, while `synchronized` is simpler but less flexible.
 
 ---
+
+### 5. ** How to Implement a Thread Safe Singeleton? **
+
+**solution:**
+
+[How to Implement a Thread-Safe Singleton in Java?](https://www.baeldung.com/java-implement-thread-safe-singleton?ref=dailydev)
+
+---
