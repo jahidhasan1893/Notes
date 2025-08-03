@@ -89,10 +89,36 @@ lock.unlock(); // must explicitly release!
 
 ---
 
-### 5. ** How to Implement a Thread Safe Singeleton? **
+### 5. **How to Implement a Thread Safe Singeleton?**
 
 **solution:**
 
 [How to Implement a Thread-Safe Singleton in Java?](https://www.baeldung.com/java-implement-thread-safe-singleton?ref=dailydev)
 
+[implementation](https://github.com/eugenp/tutorials/tree/master/patterns-modules/design-patterns-singleton/src/main/java/com/baeldung/threadsafe)
+
 ---
+
+### 6. **What is Bill Pugh Singeleton? How to implement it?**
+
+**solution:**
+
+[Bill Pugh Singleton Implementation](https://www.baeldung.com/java-bill-pugh-singleton-implementation)
+
+---
+
+### 7. **What is Volatile modifier of field in java?**
+
+**solution:**
+
+[What is volatile modifier or field in Java?](https://javarevisited.blogspot.com/2017/02/10-points-about-volatile-modifier-and-field-in-java.html)
+
+---
+
+### 8. **Explain Multithreading in java**
+
+**solution:**
+
+[Multithreading in Java: Concepts, Examples, and Best Practices](https://www.digitalocean.com/community/tutorials/multithreading-in-java?ref=dailydev)
+
+
